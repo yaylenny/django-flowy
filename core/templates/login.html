@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div class="site__login">
+  <div class="x-centered">
+    <h3 class="page__title">Login</h3>
+    <form method="post" action="" class="login__form">
+      {% csrf_token %}
+      <div class="form__row">
+        {{form.username}}
+      </div>
+      <div class="form__row">
+        {{form.password}}
+      </div>
+      <div class="x-row x-justify-center">
+        <button type="submi">Login</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,103 @@
+
+
+.vue-flow{
+  padding: 1rem 0;
+  .flow-box{
+    // padding: 1rem;
+    // border-radius: 10px;
+    // border: 1px solid #aaa;
+    // margin: 1rem 0;
+  }
+  .flow-toolbar, .toolbar-right, .toolbar-left, .item-body, .item-text, .item-bullet, .item-toggle, .item-spacer{
+    display: flex;
+    align-items: center;
+  }
+  .flow-toolbar{
+    padding: 1rem;
+    background: #ceeee8;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    .toolbar-right, .toolbar-left{
+      flex: 1;
+    }
+    .toolbar-right{
+      justify-content: flex-end;
+    }
+  }
+  .flow-items{
+    padding: 1rem 0;
+    // background: #eee;
+  }
+  .flow-item{
+    background: #fff;
+    .toggle{
+      visibility: hidden;
+      font-size: 12px;
+      color: #999;
+    }
+    &.item-active > .item-body{
+      background: #eee;
+      input[type="text"]{
+        // color: #fff;
+      }
+    }
+    .item-body{
+      &:hover .toggle{ visibility: visible; }
+      padding: .5rem 0;
+      position: relative;
+      align-items: stretch;
+    }
+    .item-spacer{
+      align-items: stretch;
+      justify-content: center;
+      flex: 0 0 32px;
+    }
+    .item-bullet, .item-toggle{
+      .bullet{
+        width: 4px;
+        height: 4px;
+        background: #444;
+        border-radius: 50%;
+        box-shadow: 0 0 1px 3px #ddd;
+        &:hovered{
+          box-shadow: 0 0 1px 7px #999;
+        }
+      }
+    }
+    .item-text{
+      flex: 1;
+    }
+    .item-menu{
+      position: absolute;
+      left: -50px;
+      width: 100px;
+      background: #fff;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      height: 150px;
+    }
+    .item-children{
+      padding-left: 1rem;
+    }
+    input[ type="text"]{
+      display: block;
+      flex: 1;
+      &, &:focus, &:active{
+        border: none!important;
+        box-shadow: none;
+        background: none!important;
+        outline: 0;
+        color: rgba( 40, 40, 40, .87 );
+        font-family: Arial;
+        font-weight: 200;
+        font-size: .8rem;
+      }
+    }
+  }
+  .flow-logo{
+    color: rgb(59, 75, 87);
+    font-weight: bold;
+    color: rgb(18, 55, 29);
+    font-size: 1.24rem;
+  }
+}
